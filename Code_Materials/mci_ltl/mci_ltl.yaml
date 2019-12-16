@@ -1,0 +1,245 @@
+inputs:
+  greetingComplete :
+    node : 'greetingComplete'
+    node_publish_topic : '/mci_ltl/inputs/greetingComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/greetingSignalComplete'
+
+  numberGameInstructionsComplete :
+    node : 'numberGameInstructionsComplete'
+    node_publish_topic : '/mci_ltl/inputs/numberGameInstructionsComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/numberGameInstructionsSignalComplete'
+
+  numberGameComplete :
+    node : 'numberGameComplete'
+    node_publish_topic : '/mci_ltl/inputs/numberGameComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/numberGameSignalComplete'
+
+  wordGameInstructionsComplete :
+    node : 'wordGameInstructionsComplete'
+    node_publish_topic : '/mci_ltl/inputs/wordGameInstructionsComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/wordGameInstructionsSignalComplete'
+
+  wordGameComplete :
+    node : 'wordGameComplete'
+    node_publish_topic : '/mci_ltl/inputs/wordGameComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/wordGameSignalComplete'
+
+  mindfulnessInstructionsComplete :
+    node : 'mindfulnessInstructionsComplete'
+    node_publish_topic : '/mci_ltl/inputs/mindfulnessInstructionsComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/mindfulnessInstructionsSignalComplete'
+
+  mindfulnessExerciseComplete :
+    node : 'mindfulnessExerciseComplete'
+    node_publish_topic : '/mci_ltl/inputs/mindfulnessExerciseComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/mindfulnessExerciseSignalComplete'
+
+  breakComplete :
+    node : 'breakComplete'
+    node_publish_topic : '/mci_ltl/inputs/breakComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/breakSignalComplete'
+
+  assessmentComplete :
+    node : 'assessmentComplete'
+    node_publish_topic : '/mci_ltl/inputs/assessmentComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/assessmentSignalComplete'
+
+  farewellComplete :
+    node : 'farewellComplete'
+    node_publish_topic : '/mci_ltl/inputs/farewellComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/farewellSignalComplete'
+
+  congratulateComplete :
+    node : 'congratulateComplete'
+    node_publish_topic : '/mci_ltl/inputs/congratulateComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/congratulateSignalComplete'
+
+  playMusicComplete :
+    node : 'playMusicComplete'
+    node_publish_topic : '/mci_ltl/inputs/playMusicComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/playMusicSignalComplete'
+
+  jokeComplete :
+    node : 'jokeComplete'
+    node_publish_topic : '/mci_ltl/inputs/jokeComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/jokeSignalComplete'
+
+  whistleComplete :
+    node : 'whistleComplete'
+    node_publish_topic : '/mci_ltl/inputs/whistleComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/whistleSignalComplete'
+
+  sneezeComplete :
+    node : 'sneezeComplete'
+    node_publish_topic : '/mci_ltl/inputs/sneezeComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/sneezeSignalComplete'
+
+  giggleComplete :
+    node : 'giggleComplete'
+    node_publish_topic : '/mci_ltl/inputs/giggleComplete'
+    pkg : 'mci_ltl'
+    filename : 'event_node_complete.py'
+    parameters :
+      signal_complete_topic : '/mci_ltl/giggleSignalComplete'
+
+  scoreHigh :
+    node : 'scoreHigh'
+    node_publish_topic : '/mci_ltl/inputs/scoreHigh'
+    pkg : 'mci_ltl'
+    filename : 'score_high.py'
+    parameters :
+      high_threshold : 0.5
+
+  userEngaged :
+    node : 'userEngaged'
+    node_publish_topic : '/mci_ltl/inputs/userEngaged'
+    pkg : 'mci_ltl'
+    filename : 'user_engaged.py'
+
+  tactileInteraction :
+    node : 'tactileInteraction'
+    node_publish_topic : '/mci_ltl/inputs/tactileInteraction'
+    pkg : 'mci_ltl'
+    filename : 'tactile_interaction.py'
+
+outputs:
+  greeting :
+    node : 'greeting'
+    node_subscribe_topic : '/mci_ltl/outputs/greeting'
+    pkg : 'mci_ltl'
+    filename : 'greeting.py'
+
+  numberGameInstructions :
+    node : 'numberGameInstructions'
+    node_subscribe_topic : '/mci_ltl/outputs/numberGameInstructions'
+    pkg : 'mci_ltl'
+    filename : 'number_game_instructions.py'
+
+  numberGame :
+    node : 'numberGame'
+    node_subscribe_topic : '/mci_ltl/outputs/numberGame'
+    pkg : 'mci_ltl'
+    filename : 'number_game.py'
+
+  wordGameInstructions :
+    node : 'wordGameInstructions'
+    node_subscribe_topic : '/mci_ltl/outputs/wordGameInstructions'
+    pkg : 'mci_ltl'
+    filename : 'word_game_instructions.py'
+
+  wordGame :
+    node : 'wordGame'
+    node_subscribe_topic : '/mci_ltl/outputs/wordGame'
+    pkg : 'mci_ltl'
+    filename : 'word_game.py'
+
+  mindfulnessInstructions :
+    node : 'mindfulnessInstructions'
+    node_subscribe_topic : '/mci_ltl/outputs/mindfulnessInstructions'
+    pkg : 'mci_ltl'
+    filename : 'mindfulness_instructions.py'
+
+  mindfulnessExercise :
+    node : 'mindfulnessExercise'
+    node_subscribe_topic : '/mci_ltl/outputs/mindfulnessExercise'
+    pkg : 'mci_ltl'
+    filename : 'mindfulness_exercise.py'
+
+  break :
+    node : 'break'
+    node_subscribe_topic : '/mci_ltl/outputs/break'
+    pkg : 'mci_ltl'
+    filename : 'break.py'
+
+  assessment :
+    node : 'assessment'
+    node_subscribe_topic : '/mci_ltl/outputs/assessment'
+    pkg : 'mci_ltl'
+    filename : 'assessment.py'
+
+  farewell :
+    node : 'farewell'
+    node_subscribe_topic : '/mci_ltl/outputs/farewell'
+    pkg : 'mci_ltl'
+    filename : 'farewell.py'
+
+  congratulate :
+    node : 'congratulate'
+    node_subscribe_topic : '/mci_ltl/outputs/congratulate'
+    pkg : 'mci_ltl'
+    filename : 'congratulate.py'
+
+  playMusic :
+    node : 'playMusic'
+    node_subscribe_topic : '/mci_ltl/outputs/playMusic'
+    pkg : 'mci_ltl'
+    filename : 'play_music.py'
+
+  joke :
+    node : 'joke'
+    node_subscribe_topic : '/mci_ltl/outputs/joke'
+    pkg : 'mci_ltl'
+    filename : 'joke.py'
+
+  whistle :
+    node : 'whistle'
+    node_subscribe_topic : '/mci_ltl/outputs/whistle'
+    pkg : 'mci_ltl'
+    filename : 'whistle.py'
+
+  sneeze :
+    node : 'sneeze'
+    node_subscribe_topic : '/mci_ltl/outputs/sneeze'
+    pkg : 'mci_ltl'
+    filename : 'sneeze.py'
+
+  giggle :
+    node : 'giggle'
+    node_subscribe_topic : '/mci_ltl/outputs/giggle'
+    pkg : 'mci_ltl'
+    filename : 'giggle.py'

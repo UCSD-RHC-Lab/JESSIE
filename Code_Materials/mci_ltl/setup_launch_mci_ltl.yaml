@@ -1,0 +1,12 @@
+slugsin_file : '/home/mayfield/LTL_MCI/LTL_stack/catkin_ws/src/LTL_stack/controller_executor/examples/mci_ltl/mci_ltl.slugsin'
+region_file : None
+destination_folder : '/home/mayfield/LTL_MCI/LTL_stack/catkin_ws/src/LTL_stack/controller_executor/examples/mci_ltl'
+example_name : 'mci_ltl'
+yaml_file : '/home/mayfield/LTL_MCI/LTL_stack/catkin_ws/src/LTL_stack/controller_executor/examples/mci_ltl/mci_ltl.yaml'
+LTLMoP_src_dir : '/home/mayfield/LTLMoP/src'
+controller_executor_dir : '/home/mayfield/LTL_MCI/LTL_stack/catkin_ws/src/LTL_stack/controller_executor'
+init_region : ''
+rot : 0
+scale : 0.1
+x_trans : 0
+y_trans : 0

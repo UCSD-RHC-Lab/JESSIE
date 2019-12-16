@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<launch>
+
+	<node name="assessmentComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="assessmentComplete /mci_ltl/inputs/assessmentComplete --signal_complete_topic /mci_ltl/assessmentSignalComplete" />
+	<node name="scoreHigh" pkg="mci_ltl" type="score_high.py" output="screen" args="scoreHigh /mci_ltl/inputs/scoreHigh --high_threshold 0.5" />
+	<node name="wordGameInstructions" pkg="mci_ltl" type="word_game_instructions.py" output="screen" args="wordGameInstructions /mci_ltl/outputs/wordGameInstructions " />
+	<node name="numberGameComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="numberGameComplete /mci_ltl/inputs/numberGameComplete --signal_complete_topic /mci_ltl/numberGameSignalComplete" />
+	<node name="mindfulnessInstructions" pkg="mci_ltl" type="mindfulness_instructions.py" output="screen" args="mindfulnessInstructions /mci_ltl/outputs/mindfulnessInstructions " />
+	<node name="mindfulnessInstructionsComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="mindfulnessInstructionsComplete /mci_ltl/inputs/mindfulnessInstructionsComplete --signal_complete_topic /mci_ltl/mindfulnessInstructionsSignalComplete" />
+	<node name="farewell" pkg="mci_ltl" type="farewell.py" output="screen" args="farewell /mci_ltl/outputs/farewell " />
+	<node name="assessment" pkg="mci_ltl" type="assessment.py" output="screen" args="assessment /mci_ltl/outputs/assessment " />
+	<node name="sneezeComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="sneezeComplete /mci_ltl/inputs/sneezeComplete --signal_complete_topic /mci_ltl/sneezeSignalComplete" />
+	<node name="jokeComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="jokeComplete /mci_ltl/inputs/jokeComplete --signal_complete_topic /mci_ltl/jokeSignalComplete" />
+	<node name="congratulateComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="congratulateComplete /mci_ltl/inputs/congratulateComplete --signal_complete_topic /mci_ltl/congratulateSignalComplete" />
+	<node name="playMusic" pkg="mci_ltl" type="play_music.py" output="screen" args="playMusic /mci_ltl/outputs/playMusic " />
+	<node name="tactileInteraction" pkg="mci_ltl" type="tactile_interaction.py" output="screen" args="tactileInteraction /mci_ltl/inputs/tactileInteraction " />
+	<node name="greetingComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="greetingComplete /mci_ltl/inputs/greetingComplete --signal_complete_topic /mci_ltl/greetingSignalComplete" />
+	<node name="giggleComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="giggleComplete /mci_ltl/inputs/giggleComplete --signal_complete_topic /mci_ltl/giggleSignalComplete" />
+	<node name="mindfulnessExerciseComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="mindfulnessExerciseComplete /mci_ltl/inputs/mindfulnessExerciseComplete --signal_complete_topic /mci_ltl/mindfulnessExerciseSignalComplete" />
+	<node name="numberGameInstructions" pkg="mci_ltl" type="number_game_instructions.py" output="screen" args="numberGameInstructions /mci_ltl/outputs/numberGameInstructions " />
+	<node name="userEngaged" pkg="mci_ltl" type="user_engaged.py" output="screen" args="userEngaged /mci_ltl/inputs/userEngaged " />
+	<node name="congratulate" pkg="mci_ltl" type="congratulate.py" output="screen" args="congratulate /mci_ltl/outputs/congratulate " />
+	<node name="break" pkg="mci_ltl" type="break.py" output="screen" args="break /mci_ltl/outputs/break " />
+	<node name="whistle" pkg="mci_ltl" type="whistle.py" output="screen" args="whistle /mci_ltl/outputs/whistle " />
+	<node name="numberGame" pkg="mci_ltl" type="number_game.py" output="screen" args="numberGame /mci_ltl/outputs/numberGame " />
+	<node name="breakComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="breakComplete /mci_ltl/inputs/breakComplete --signal_complete_topic /mci_ltl/breakSignalComplete" />
+	<node name="sneeze" pkg="mci_ltl" type="sneeze.py" output="screen" args="sneeze /mci_ltl/outputs/sneeze " />
+	<node name="wordGame" pkg="mci_ltl" type="word_game.py" output="screen" args="wordGame /mci_ltl/outputs/wordGame " />
+	<node name="giggle" pkg="mci_ltl" type="giggle.py" output="screen" args="giggle /mci_ltl/outputs/giggle " />
+	<node name="wordGameComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="wordGameComplete /mci_ltl/inputs/wordGameComplete --signal_complete_topic /mci_ltl/wordGameSignalComplete" />
+	<node name="farewellComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="farewellComplete /mci_ltl/inputs/farewellComplete --signal_complete_topic /mci_ltl/farewellSignalComplete" />
+	<node name="greeting" pkg="mci_ltl" type="greeting.py" output="screen" args="greeting /mci_ltl/outputs/greeting " />
+	<node name="wordGameInstructionsComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="wordGameInstructionsComplete /mci_ltl/inputs/wordGameInstructionsComplete --signal_complete_topic /mci_ltl/wordGameInstructionsSignalComplete" />
+	<node name="numberGameInstructionsComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="numberGameInstructionsComplete /mci_ltl/inputs/numberGameInstructionsComplete --signal_complete_topic /mci_ltl/numberGameInstructionsSignalComplete" />
+	<node name="joke" pkg="mci_ltl" type="joke.py" output="screen" args="joke /mci_ltl/outputs/joke " />
+	<node name="mindfulnessExercise" pkg="mci_ltl" type="mindfulness_exercise.py" output="screen" args="mindfulnessExercise /mci_ltl/outputs/mindfulnessExercise " />
+	<node name="playMusicComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="playMusicComplete /mci_ltl/inputs/playMusicComplete --signal_complete_topic /mci_ltl/playMusicSignalComplete" />
+	<node name="whistleComplete" pkg="mci_ltl" type="event_node_complete.py" output="screen" args="whistleComplete /mci_ltl/inputs/whistleComplete --signal_complete_topic /mci_ltl/whistleSignalComplete" />
+</launch>

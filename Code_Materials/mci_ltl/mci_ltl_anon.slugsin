@@ -1,0 +1,236 @@
+[INPUT]
+
+########## Completion Nodes ##########
+
+greetingComplete
+numberGameInstructionsComplete
+numberGameComplete
+wordGameInstructionsComplete
+wordGameComplete
+mindfulnessInstructionsComplete
+mindfulnessExerciseComplete
+breakComplete
+assessmentComplete
+farewellComplete
+congratulateComplete
+playMusicComplete
+jokeComplete
+whistleComplete
+sneezeComplete
+giggleComplete
+
+########## Sensing Nodes ##########
+
+scoreHigh
+userEngaged
+tactileInteraction
+
+############################################################
+
+#######################
+# OUTPUT PROPOSITIONS #
+#######################
+# Robot actions       #
+#######################
+
+
+[OUTPUT]
+
+greeting
+numberGameInstructions
+numberGame
+wordGameInstructions
+wordGame
+mindfulnessInstructions
+mindfulnessExercise
+break
+assessment
+farewell
+congratulate
+playMusic
+joke
+whistle
+sneeze
+giggle
+
+############################################################
+
+##########################################
+# ENVIRONMENT INITIALIZATION ASSUMPTIONS #
+##########################################
+# Initial condition on inputs            #
+##########################################
+
+
+[ENV_TRANS]
+
+# Actions that were not started cannot be completed
+| ! & ! greetingComplete ! greeting ! greetingComplete'
+| ! & ! numberGameInstructionsComplete ! numberGameInstructions ! numberGameInstructionsComplete'
+| ! & ! numberGameComplete ! numberGame ! numberGameComplete'
+| ! & ! wordGameInstructionsComplete ! wordGameInstructions ! wordGameInstructionsComplete'
+| ! & ! wordGameComplete ! wordGame ! wordGameComplete'
+| ! & ! mindfulnessInstructionsComplete ! mindfulnessInstructions ! mindfulnessInstructionsComplete'
+| ! & ! mindfulnessExerciseComplete ! mindfulnessExercise ! mindfulnessExerciseComplete'
+| ! & ! breakComplete ! break ! breakComplete'
+| ! & ! assessmentComplete ! assessment ! assessmentComplete'
+| ! & ! farewellComplete ! farewell ! farewellComplete'
+| ! & ! congratulateComplete ! congratulate ! congratulateComplete'
+| ! & ! playMusicComplete ! playMusic ! playMusicComplete'
+| ! & ! jokeComplete ! joke ! jokeComplete'
+| ! & ! whistleComplete ! whistle ! whistleComplete'
+| ! & ! sneezeComplete ! sneeze ! sneezeComplete'
+| ! & ! giggleComplete ! giggle ! giggleComplete'
+
+# Actions that completed remain completed (except congratulate)
+| ! greetingComplete greetingComplete'
+| ! numberGameInstructionsComplete numberGameInstructionsComplete'
+| ! numberGameComplete numberGameComplete'
+| ! wordGameInstructionsComplete wordGameInstructionsComplete'
+| ! wordGameComplete wordGameComplete'
+| ! mindfulnessInstructionsComplete mindfulnessInstructionsComplete'
+| ! mindfulnessExerciseComplete mindfulnessExerciseComplete'
+| ! breakComplete breakComplete'
+| ! assessmentComplete assessmentComplete'
+| ! farewellComplete farewellComplete'
+#playMusicComplete -> playMusicComplete'
+| ! jokeComplete jokeComplete'
+| ! whistleComplete whistleComplete'
+| ! sneezeComplete sneezeComplete'
+| ! giggleComplete giggleComplete'
+| ! congratulateComplete congratulateComplete'
+
+# This will make the music play only once
+| ! playMusicComplete playMusicComplete'
+# The following will enable multiple music playing
+#playMusicComplete -> !playMusicComplete'
+
+############################################################
+
+#################################################
+# SYSTEM SAFETY GUARANTEES                      #
+#################################################
+# Constraints on when we can call robot actions #
+#################################################
+
+
+[ENV_INIT]
+
+! greetingComplete
+! numberGameInstructionsComplete
+! numberGameComplete
+! wordGameInstructionsComplete
+! wordGameComplete
+! mindfulnessInstructionsComplete
+! mindfulnessExerciseComplete
+! breakComplete
+! assessmentComplete
+! farewellComplete
+! congratulateComplete
+! playMusicComplete
+! jokeComplete
+! whistleComplete
+! sneezeComplete
+! giggleComplete
+
+! scoreHigh
+# Assume user begins engaged
+userEngaged
+! tactileInteraction
+
+############################################################
+
+####################################
+# SYSTEM INITIALIZATION GUARANTEES #
+####################################
+# Initial condition on outputs     #
+####################################
+
+
+[SYS_TRANS]
+
+# Mutual exclusion on the actions.
+| | | | | | | | | | | & & & & & & & & & & ! greeting ! numberGameInstructions ! numberGame ! wordGameInstructions ! wordGame ! mindfulnessInstructions ! mindfulnessExercise ! break ! assessment ! farewell ! playMusic & & & & & & & & & & greeting ! numberGameInstructions ! numberGame ! wordGameInstructions ! wordGame ! mindfulnessInstructions ! mindfulnessExercise ! break ! assessment ! farewell ! playMusic & & & & & & & & & & ! greeting numberGameInstructions ! numberGame ! wordGameInstructions ! wordGame ! mindfulnessInstructions ! mindfulnessExercise ! break ! assessment ! farewell ! playMusic & & & & & & & & & & ! greeting ! numberGameInstructions numberGame ! wordGameInstructions ! wordGame ! mindfulnessInstructions ! mindfulnessExercise ! break ! assessment ! farewell ! playMusic & & & & & & & & & & ! greeting ! numberGameInstructions ! numberGame wordGameInstructions ! wordGame ! mindfulnessInstructions ! mindfulnessExercise ! break ! assessment ! farewell ! playMusic & & & & & & & & & & ! greeting ! numberGameInstructions ! numberGame ! wordGameInstructions wordGame ! mindfulnessInstructions ! mindfulnessExercise ! break ! assessment ! farewell ! playMusic & & & & & & & & & & ! greeting ! numberGameInstructions ! numberGame ! wordGameInstructions ! wordGame mindfulnessInstructions ! mindfulnessExercise ! break ! assessment ! farewell ! playMusic & & & & & & & & & & ! greeting ! numberGameInstructions ! numberGame ! wordGameInstructions ! wordGame ! mindfulnessInstructions mindfulnessExercise ! break ! assessment ! farewell ! playMusic & & & & & & & & & & ! greeting ! numberGameInstructions ! numberGame ! wordGameInstructions ! wordGame ! mindfulnessInstructions ! mindfulnessExercise break ! assessment ! farewell ! playMusic & & & & & & & & & & ! greeting ! numberGameInstructions ! numberGame ! wordGameInstructions ! wordGame ! mindfulnessInstructions ! mindfulnessExercise ! break assessment ! farewell ! playMusic & & & & & & & & & & ! greeting ! numberGameInstructions ! numberGame ! wordGameInstructions ! wordGame ! mindfulnessInstructions ! mindfulnessExercise ! break ! assessment farewell ! playMusic & & & & & & & & & & ! greeting ! numberGameInstructions ! numberGame ! wordGameInstructions ! wordGame ! mindfulnessInstructions ! mindfulnessExercise ! break ! assessment ! farewell playMusic
+
+###### Change order of event nodes here ######
+# Ordering constraints
+| ! ! greetingComplete ! playMusic'
+| ! ! playMusicComplete ! wordGameInstructions'
+| ! ! wordGameInstructionsComplete ! wordGame'
+###### Change reactive nodes here #####
+# Reactions to person
+| ! & scoreHigh' ! congratulateComplete' congratulate'
+
+############################################################
+
+####################################################
+# ENVIRONMENT LIVENESS ASSUMPTIONS                 #
+####################################################
+# Assumptions about behavior of input propositions #
+####################################################
+
+
+[SYS_INIT]
+
+# Assume the robot starts not doing anything
+! greeting
+! numberGameInstructions
+! numberGame
+! wordGameInstructions
+! wordGame
+! mindfulnessInstructions
+! mindfulnessExercise
+! break
+! assessment
+! farewell
+! congratulate
+! playMusic
+! joke
+! whistle
+! sneeze
+! giggle
+
+############################################################
+
+####################################################
+# ENVIRONMENT SAFETY ASSUMPTIONS                   #
+####################################################
+# Assumptions about behavior of input propositions #
+####################################################
+
+
+[ENV_LIVENESS]
+
+# Assume that if an action starts, it completes
+| ! greeting greetingComplete
+| ! numberGameInstructions numberGameInstructionsComplete
+| ! numberGame numberGameComplete
+| ! wordGameInstructions wordGameInstructionsComplete
+| ! wordGame wordGameComplete
+| ! mindfulnessInstructions mindfulnessInstructionsComplete
+| ! mindfulnessExercise mindfulnessExerciseComplete
+| ! break breakComplete
+| ! assessment assessmentComplete
+| ! farewell farewellComplete
+| ! congratulate congratulateComplete
+| ! playMusic playMusicComplete
+| ! joke jokeComplete
+| ! whistle whistleComplete
+| ! sneeze sneezeComplete
+| ! giggle giggleComplete
+
+############################################################
+
+###########################################
+# SYSTEM LIVENESS GUARANTEES              #
+###########################################
+# What we want the robot to eventually do #
+###########################################
+
+
+[SYS_LIVENESS]
+
+# Finish running the instructions
+wordGameComplete
+
+
