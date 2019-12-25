@@ -4,6 +4,14 @@
 Filename: word_game_instructions.py
 Package: mci_ltl
 Description: Give instructions and an example about the word game
+
+If you are interested in learning more, or if you use this system in your work, 
+please cite and refer to [1].
+
+[1] A. Kubota, E. I. C. Peterson, V. Rajendren, H. Kress-Gazit, and L. D. Riek. 
+JESSIE: Synthesizing Social Robot Behaviors for Personalized Neurorehabilitation 
+and Beyond. In Proceedings of the 2020 ACM/IEEE International Conference on 
+Human-Robot Interaction (HRI). IEEE, 2020.
 """
 
 from common import *

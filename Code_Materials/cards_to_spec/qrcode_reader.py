@@ -6,6 +6,14 @@ Translates an image of the card program to an LTLspec and saves it to a file.
 If the output file is unspecified, it saves it to a "mci_ltl.slugs" in the current directory.
 
 Use: python3 qrcode_reader.py name_of_image [output_location]
+
+If you are interested in learning more, or if you use this system in your work, 
+please cite and refer to [1].
+
+[1] A. Kubota, E. I. C. Peterson, V. Rajendren, H. Kress-Gazit, and L. D. Riek. 
+JESSIE: Synthesizing Social Robot Behaviors for Personalized Neurorehabilitation 
+and Beyond. In Proceedings of the 2020 ACM/IEEE International Conference on 
+Human-Robot Interaction (HRI). IEEE, 2020.
 """
 
 from copy import deepcopy
