@@ -1,7 +1,11 @@
 # JESSIE
-JESSIE (Just Express Specifications, Synthesize, and Interact) is an end-to-end robotic system that enables programmers of any experience level to quickly and easily program social robots to exhibit complex behavior. For more information, please visit [our wiki](https://github.com/UCSD-RHC-Lab/JESSIE/wiki).
 
-If you are interested in learning more, or if you use this system in your work, please cite and refer to [1].
+![The JESSIE system: A Kuri robot with tangible specific cards in front of it](https://github.com/UCSD-RHC-Lab/JESSIE/raw/master/Documentation/Images/system_overview.jpg "An Overview of JESSIE, which includes a Kuri robot and tangible specification cards")
+ JESSIE (Just Express Specifications, Synthesize, and Interact) is an end-to-end robotic system that enables programmers of any experience level to quickly and easily program social robots to exhibit complex behavior. 
+ 
+For more information, please visit [our wiki](https://github.com/UCSD-RHC-Lab/JESSIE/wiki).
+
+If you use any aspect of this system in your work, we ask tat you please cite and refer to [1]:
 
 [1] [A. Kubota, E. I. C. Peterson, V. Rajendren, H. Kress-Gazit, and L. D. Riek. JESSIE: Synthesizing Social Robot Behaviors for Personalized Neurorehabilitation and Beyond. In Proceedings of the 2020 ACM/IEEE International Conference on Human-Robot Interaction (HRI). IEEE, 2020.](https://cseweb.ucsd.edu/~akubota/files/HRI2020_kubota.pdf)
 
