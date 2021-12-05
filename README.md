@@ -5,7 +5,7 @@
  
 For more information, please visit [our wiki](https://github.com/UCSD-RHC-Lab/JESSIE/wiki).
 
-If you use any aspect of this system in your work, we ask tat you please cite and refer to [1]:
+If you use any aspect of this system in your work, we ask that you please cite [1]:
 
 [1] [A. Kubota, E. I. C. Peterson, V. Rajendren, H. Kress-Gazit, and L. D. Riek. JESSIE: Synthesizing Social Robot Behaviors for Personalized Neurorehabilitation and Beyond. In Proceedings of the 2020 ACM/IEEE International Conference on Human-Robot Interaction (HRI). IEEE, 2020.](https://cseweb.ucsd.edu/~akubota/files/HRI2020_kubota.pdf)
 
